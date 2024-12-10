@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  --background-color: #000000;
+  /* border: 1px solid white; */
+  color: white;
+  box-sizing: border-box;
+}
+.App {
+  height: 100dvh;
+  background-color: var(--background-color);
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer {
+  width: 90dvw;
+  height: 90dvh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  height: 50dvh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "bg textOne"
+    "bg textTwo";
+}
+
+.background {
+  grid-area: bg;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("./assets/cloudOne.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2:nth-child(1) {
+    font-weight: 30;
+  }
+
+  h2:nth-child(2) {
+    font-size: 50px;
+    padding-top: 50px;
+  }
+}
+
+h2:nth-child() .textOne {
+  grid-area: textOne;
+  font-size: 20px;
+  padding: 40px;
+}
+
+.textOne {
+  font-size: 60px;
+  padding: 40px;
+  font-weight: 100;
+
+  h3 {
+    font-size: 10px;
+    color: greenyellow;
+  }
+
+  p {
+    font-size: 45px;
+    font-weight: 100;
+  }
+}
+
+.textTwo {
+  grid-area: textTwo;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 40px;
+  font-size: 60px;
+  font-weight: 100;
+}
